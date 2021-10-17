@@ -162,7 +162,7 @@ Contact.defaultProps = {
     sectionTitle: "Contact Us",
     sectionDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
     AddTitle: "Address",
-    Address: "2750 Quadra Street Victoria, Canada.",
+    Address: "6942 First Street, Livermore, CA",
     EmailTitle: "Email",
     Email: "brookegbsn@yahoo.com",
     PhoneTitle: "Phone",
