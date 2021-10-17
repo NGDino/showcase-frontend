@@ -25,7 +25,7 @@ const Layout = ({children}) => {
 
     return (
         <React.Fragment>
-            <Helmet title="Gloxy - Gatsby/React multipurpose responsive landing page template" defer={false} />
+            <Helmet title="Showcase Staging" defer={false} />
             {loader ? <Preloader /> : null}
             <Navigationbar />
             {children}
