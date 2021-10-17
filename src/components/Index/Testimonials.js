@@ -59,7 +59,7 @@ Testimonials.propTypes = {
 Testimonials.defaultProps = { 
     testimonialsData: [
         {
-            clientImage: require("../../images/client-two.png"),
+            clientImage: require("../../images/client-one.png"),
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum sagittis nulla, non vehicula mauris rutrum vitae. Sed non consequat dolor. Cras in odio augue.",
             Name: "Jason",
             Profession: "Valued Customer",

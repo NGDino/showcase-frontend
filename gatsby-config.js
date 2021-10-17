@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gloxy - Gatsby/React multipurpose responsive landing page template`,
-    description: `Gloxy - Gatsby/React multipurpose responsive landing page template`,
+    title: `Showcase Staging and Design`,
+    description: `Professional Staging and Design`,
     author: `@envy_theme`,
   },
   plugins: [
