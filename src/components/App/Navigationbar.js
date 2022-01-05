@@ -20,7 +20,7 @@ const getLogo = graphql`
     }
 }
 `
-const Navigationbar = () => {
+const Navigationbar = ({contactInfo}) => {
     const data = useStaticQuery(getLogo)
     const [collapsed, setCollapsed] = React.useState(false)
 
@@ -70,7 +70,7 @@ const Navigationbar = () => {
 
     return (
         <React.Fragment>
-            <TopHeader />
+            <TopHeader contactInfo={contactInfo}/>
 
             <nav id="navbar" className="navbar navbar-expand-md navbar-light">
                 <div className="container">

@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from "prop-types";
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
 
-const Contact = (props) => {
+const Contact = ({contactInfo}) => {
+    console.log('contact page',contactInfo);
     const handleForm = e => {
         e.preventDefault();
     }
@@ -12,9 +13,9 @@ const Contact = (props) => {
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2 text-center">
                         <div className="section-title">
-                            <h2>{props.sectionTitle}</h2>
-                            <p>{props.sectionDescription}</p>
-                            <span className="section-title-bg">{props.SectionbgTitle}</span>
+                            <h2>contact Us</h2>
+                            <p>{contactInfo.contactDescription}</p>
+                            <span className="section-title-bg">Contact</span>
                         </div>
                     </div>
                 </div>
@@ -22,20 +23,20 @@ const Contact = (props) => {
                 <div className="row">
                     <div className="col-lg-4 col-md-4">
                         <div className="address-area">
-                            <div className="addess">
+                            {/* <div className="addess">
                                 <i className="fa fa-map-marker"></i>
                                 <h4>{props.AddTitle}</h4>
                                 <p>{props.Address}</p>
-                            </div>
+                            </div> */}
                             <div className="email">
                                 <i className="fa fa-envelope"></i>
-                                <h4>{props.EmailTitle}</h4>
-                                <p>{props.Email}</p>
+                                <h4>Email</h4>
+                                <p>{contactInfo.email}</p>
                             </div>
                             <div className="phone">
                                 <i className="fa fa-phone"></i>
-                                <h4>{props.PhoneTitle}</h4>
-                                <p>{props.Phone}</p>
+                                <h4>Phone</h4>
+                                <p>{contactInfo.phoneNumber}</p>
                             </div>
                         </div>
                     </div>

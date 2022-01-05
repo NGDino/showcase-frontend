@@ -16,23 +16,21 @@ import Footer from './Footer'
 import GoTop from './GoTop'
 import Preloader from './Preloader'
 
-const Layout = ({children}) => {
-    const [loader, setLoader] = React.useState(true);
 
-    React.useEffect(() => {
-        setTimeout(() => setLoader(false), 2000);
-    }, [])
 
+const Layout = ({children, contactInfo}) => {
     return (
         <React.Fragment>
             <Helmet title="Showcase Staging" defer={false} />
-            {loader ? <Preloader /> : null}
-            <Navigationbar />
+            <Navigationbar contactInfo={contactInfo}/>
             {children}
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
             <Footer />
         </React.Fragment>
     )
-}
 
+
+
+
+}
 export default Layout

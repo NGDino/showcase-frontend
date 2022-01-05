@@ -1,15 +1,20 @@
 import React from 'react'
 import PropTypes from "prop-types";
 
-const Services = (props) => {
-    const servicedata = props.servicesData.map((service, index) => (
+const Services = ({servicesOverview, servicesCards}) => {
+    const  servicesIcons=  [
+     
+        "glyph-icon flaticon-032-target", "glyph-icon flaticon-012-management","glyph-icon flaticon-024-user"
+    ]
+
+    const servicedata = servicesCards.map((service, index) => (
         <div className="col-md-6 col-lg-4 text-center" key={index}>
             <div className="service-item">
                 <div className="glyph">
-                    <i className={service.icon}></i>
+                    <i className={servicesIcons[index]}></i>
                 </div>
-                <h3>{service.heading}</h3>
-                <p>{service.description}</p>
+                <h3>{service.serviceTitle}</h3>
+                <p>{service.serviceDescription}</p>
             </div>
         </div>
     ));
@@ -19,9 +24,9 @@ const Services = (props) => {
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2 text-center">
                         <div className="section-title">
-                            <h2>{props.sectionTitle}</h2>
-                            <p>{props.sectionDescription}</p>
-                            <span className="section-title-bg">{props.SectionbgTitle}</span>
+                            <h2>Services</h2>
+                            <p>{servicesOverview}</p>
+                            <span className="section-title-bg">Services</span>
                         </div>
                     </div>
                 </div>
@@ -33,41 +38,5 @@ const Services = (props) => {
     )
 }
 
-Services.propTypes = {
-    SectionbgTitle: PropTypes.string,
-    sectionTitle: PropTypes.string,
-    sectionDescription: PropTypes.string,
-    servicesData: PropTypes.array
-};
-
-//Default Props
-Services.defaultProps = {
-    SectionbgTitle: "Services",
-    sectionTitle: "Services",
-    sectionDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-
-    servicesData: [
-     
-        {
-            icon: "glyph-icon flaticon-032-target",
-            heading: "Picture Perfect Staging",
-            description:
-                "Not only do staged homes attract more visitors and excite clients, but they also sell faster."
-        },
-        {
-            icon: "glyph-icon flaticon-012-management",
-            heading: "Creative Designes",
-            description:
-                "Our beautiful designes will leave your guests speachless and make them feel at home."
-        },
-        {
-            icon: "glyph-icon flaticon-024-user",
-            heading: "Friendly Support",
-            description:
-                "We strive to provide top notch service and make every customer feel like family."
-        },
-    ]
-}
 
 export default Services

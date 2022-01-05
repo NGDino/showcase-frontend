@@ -12,7 +12,8 @@ const getAboutImages = graphql`
     }
 }
 `
-const About = () => {
+const About = (props) => {
+    console.log('props', props)
     const data = useStaticQuery(getAboutImages)
     return (
         <div id="about" className="about-us">
