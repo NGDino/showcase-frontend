@@ -50,7 +50,7 @@ const getImages = graphql`
 }
 `
 
-const Works = () => {
+const Works = ({workImages}) => {
     const data = useStaticQuery(getImages)
     const [isOpen, setIsOpen] = React.useState(false)
     const [photoIndex, setPhotoIndex] = React.useState(0)

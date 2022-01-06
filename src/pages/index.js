@@ -33,7 +33,8 @@ const IndexPage = () => {
                 url
               }
             },
-            reviewText
+            reviewText,
+            name
           },
           workImages{
             asset{

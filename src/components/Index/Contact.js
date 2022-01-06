@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from "prop-types";
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
 
-const Contact = ({contactInfo}) => {
-    console.log('contact page',contactInfo);
+const Contact = ({ contactInfo }) => {
     const handleForm = e => {
         e.preventDefault();
     }
@@ -109,7 +108,7 @@ const Contact = ({contactInfo}) => {
                                             />
                                         </div>
                                     </div>
- 
+
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group">
                                             <TextInput
