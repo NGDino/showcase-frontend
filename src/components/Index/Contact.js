@@ -12,7 +12,7 @@ const Contact = ({ contactInfo }) => {
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2 text-center">
                         <div className="section-title">
-                            <h2>contact Us</h2>
+                            <h2>Contact Us</h2>
                             <p>{contactInfo.contactDescription}</p>
                             <span className="section-title-bg">Contact</span>
                         </div>
@@ -143,30 +143,5 @@ const Contact = ({ contactInfo }) => {
     )
 }
 
-//Props Types
-Contact.propTypes = {
-    SectionbgTitle: PropTypes.string,
-    sectionTitle: PropTypes.string,
-    sectionDescription: PropTypes.string,
-    AddTitle: PropTypes.string,
-    Address: PropTypes.string,
-    EmailTitle: PropTypes.string,
-    Email: PropTypes.string,
-    PhoneTitle: PropTypes.string,
-    Phone: PropTypes.string,
-}
-
-//Default Props
-Contact.defaultProps = {
-    SectionbgTitle: "Contact",
-    sectionTitle: "Contact Us",
-    sectionDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-    AddTitle: "Address",
-    Address: "6942 First Street, Livermore, CA",
-    EmailTitle: "Email",
-    Email: "brookegbsn@yahoo.com",
-    PhoneTitle: "Phone",
-    Phone: "+1-325-555-0156",
-}
 
 export default Contact
