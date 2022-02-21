@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link as a } from 'gatsby'
 
 const TopHeader = ({contactInfo}) => {
     return (
@@ -27,7 +26,7 @@ const TopHeader = ({contactInfo}) => {
                         <div className="social-icons">
                             <ul className="list-inline">
                                 <li>
-                                    <a href="https://www.facebook.com/duartefamilyrealestate" target="_blank">
+                                    <a href="https://www.facebook.com/duartefamilyrealestate" target="_blank" rel="noreferrer">
                                         <i className="fa fa-facebook"></i>
                                     </a>
                                 </li>
@@ -37,7 +36,7 @@ const TopHeader = ({contactInfo}) => {
                                     </a>
                                 </li> */}
                                 <li>
-                                    <a href="https://www.instagram.com/showcasestaginganddesign/" target="_blank">
+                                    <a href="https://www.instagram.com/showcasestaginganddesign/" target="_blank" rel="noreferrer">
                                         <i className="fa fa-instagram"></i>
                                     </a>
                                 </li>

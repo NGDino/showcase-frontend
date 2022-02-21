@@ -14,7 +14,6 @@ import './assets/default-color.css'
 import Navigationbar from './Navigationbar'
 import Footer from './Footer'
 import GoTop from './GoTop'
-import Preloader from './Preloader'
 
 
 

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/App/Layout'
-import SEO from "../components/App/seo"
+import Seo from "../components/App/seo"
 import Banner from "../components/Index/Banner"
 import Services from "../components/Index/Services"
 import Works from "../components/Index/Works"
@@ -55,7 +55,7 @@ const IndexPage = () => {
     const {contactInfo, heroImage, reviews, servicesCards, servicesOverview, workImages, _rawBio} = data.sanityLandingPage
     return(
     <Layout contactInfo={contactInfo}>
-        <SEO title="Home" />
+        <Seo title="Home" />
         <Banner heroImage={heroImage} />
         <Services servicesOverview={servicesOverview} servicesCards={servicesCards}/>
         <Works workImages={workImages}/>

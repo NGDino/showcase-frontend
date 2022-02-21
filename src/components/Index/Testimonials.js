@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from "prop-types"
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 

@@ -23,7 +23,6 @@
     "react": "*",
     "react-accessible-accordion": "*",
     "react-anchor-link-smooth-scroll": "*",
-    "react-animate-on-scroll": "*",
     "react-bootstrap": "*",
     "react-bootstrap-tabs": "*",
     "react-bootstrap4-form-validation": "*",

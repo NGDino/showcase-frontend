@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from "prop-types";
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
 
 const Contact = ({ contactInfo }) => {

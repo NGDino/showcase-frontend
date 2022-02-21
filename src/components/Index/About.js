@@ -39,7 +39,7 @@ const About = (props) => {
                     </div>
 
                     <div className="col-lg-6 brooke">
-                        <img src={data.image1.childImageSharp.fluid.src} alt="Image" />
+                        <img src={data.image1.childImageSharp.fluid.src} alt="Brooke" />
                     </div>
                 </div>
             </div>
