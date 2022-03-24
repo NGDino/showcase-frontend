@@ -11,13 +11,13 @@ import Testimonials from "../components/Index/Testimonials"
 import Contact from "../components/Index/Contact"
 
 const IndexPage = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
         sanityLandingPage{
           heroImage {
-           asset{
-            url
-          },
+            asset{
+              url
+            },
             descriptor,
             tagline,
             headline
@@ -46,24 +46,28 @@ const IndexPage = () => {
             phoneNumber,
             email
           },
-          _rawBio
+          about{
+            smallDescription,
+            title,
+            bio
+          },
+          workDescription
         }
       }
       
 `)
-    console.log('data', data)
-    const {contactInfo, heroImage, reviews, servicesCards, servicesOverview, workImages, _rawBio} = data.sanityLandingPage
-    return(
+  const { contactInfo, heroImage, reviews, servicesCards, servicesOverview, workImages, about, workDescription } = data.sanityLandingPage
+  return (
     <Layout contactInfo={contactInfo}>
-        <Seo title="Home" />
-        <Banner heroImage={heroImage} />
-        <Services servicesOverview={servicesOverview} servicesCards={servicesCards}/>
-        <Works workImages={workImages}/>
-        <About _rawBio={_rawBio}/>
-        <Testimonials reviews={reviews}/>
-        <Contact contactInfo={contactInfo}/>
+      <Seo title="Home" />
+      <Banner heroImage={heroImage} />
+      <Services servicesOverview={servicesOverview} servicesCards={servicesCards} />
+      <Works workImages={workImages} workDescription={workDescription} />
+      <About aboutInfo={about} />
+      <Testimonials reviews={reviews} />
+      <Contact contactInfo={contactInfo} />
     </Layout>
-    )
+  )
 }
 
 export default IndexPage

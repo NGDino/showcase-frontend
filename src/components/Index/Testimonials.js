@@ -3,7 +3,6 @@ import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 
 const Testimonials = ({reviews}) => {
-    console.log('reviews', reviews)
     const [display, setDisplay] = React.useState(false)
 
     React.useEffect(() => {

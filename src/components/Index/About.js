@@ -12,8 +12,9 @@ const getAboutImages = graphql`
     }
 }
 `
-const About = (props) => {
-    console.log('props', props)
+const About = ( {aboutInfo}) => {
+    // const {about} = aboutInfo
+    // const about = aboutInfo.aboutInfo;
     const data = useStaticQuery(getAboutImages)
     return (
         <div id="about" className="about-us">
@@ -22,7 +23,7 @@ const About = (props) => {
                     <div className="col-lg-8 offset-lg-2 text-center">
                         <div className="section-title text-center">
                             <h2>About Us</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.</p>
+                            <p>{aboutInfo.smallDescription? aboutInfo.smallDescription : ''}</p>
                             <span className="section-title-bg">About</span>
                         </div>
                     </div>
@@ -31,10 +32,10 @@ const About = (props) => {
                 <div className="row align-items-center">
                     <div className="col-lg-6">
                         <div className="about-text">
-                            <h3>Professional Real Estate Staging</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-            
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
+                            <h3>{aboutInfo.title}</h3>
+                            <p> 
+                                {aboutInfo.bio}
+                            </p>
                         </div>
                     </div>
 

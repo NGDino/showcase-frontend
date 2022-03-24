@@ -50,7 +50,7 @@ const getImages = graphql`
 }
 `
 
-const Works = ({workImages}) => {
+const Works = ({workImages, workDescription}) => {
     const data = useStaticQuery(getImages)
     const [isOpen, setIsOpen] = React.useState(false)
     const [photoIndex, setPhotoIndex] = React.useState(0)
@@ -80,7 +80,7 @@ const Works = ({workImages}) => {
                         <div className="col-lg-8 offset-lg-2 text-center">
                             <div className="section-title">
                                 <h2>Our Works</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.</p>
+                                <p>{workDescription}</p>
                                 <span className="section-title-bg">Works</span>
                             </div>
                         </div>
