@@ -42,7 +42,7 @@ const Contact = ({ contactInfo }) => {
                         <div className="contact-form">
                             <ValidationForm
                                 id="contactForm"
-                                name="contactForm"
+                                name="contactForm v2"
                                 method="post"
                                 ContentType = "application/x-www-form-urlencoded"
                                 data-netlify="true"
@@ -52,7 +52,7 @@ const Contact = ({ contactInfo }) => {
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
                                         <div className="form-group">
-                                            <input type="hidden" name="formName" value="contactForm"/>
+                                            <input type="hidden" name="formName" value="contactForm v2"/>
                                             <TextInput
                                                 name="name"
                                                 id="name"
