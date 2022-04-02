@@ -1,10 +1,9 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
 
 const Contact = ({ contactInfo }) => {
-    const handleForm = e => {
-        e.preventDefault();
-    }
+    const form = useRef();
+
     return (
         <section id="contact" className="contact-area ptb-100">
             <div className="container">
@@ -43,7 +42,9 @@ const Contact = ({ contactInfo }) => {
                         <div className="contact-form">
                             <ValidationForm
                                 id="contactForm"
-                                onSubmit={handleForm}
+                                name="contactForm"
+                                method="POST"
+                                data-netlify="true"
                             >
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">

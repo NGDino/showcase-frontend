@@ -81,11 +81,7 @@ const Navigationbar = ({contactInfo}) => {
                         />
                     </Link>
                     <Link className="navbar-brand logo-2" to="/">
-                        <img 
-                            className="img-fluid" 
-                            src={data.logo2.childImageSharp.fixed.src}
-                            alt="Logo"
-                        />
+                        <h2 className="showcase-lettering">Showcase Staging</h2>
                     </Link>
 
                     <button 

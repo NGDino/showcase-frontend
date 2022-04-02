@@ -9,6 +9,7 @@ import Works from "../components/Index/Works"
 import About from "../components/Index/About"
 import Testimonials from "../components/Index/Testimonials"
 import Contact from "../components/Index/Contact"
+import '../components/App/fonts/QwitcherGrypen-Bold.ttf'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
