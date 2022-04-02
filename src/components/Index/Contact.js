@@ -52,6 +52,7 @@ const Contact = ({ contactInfo }) => {
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
                                         <div className="form-group">
+                                            <input type="hidden" name="formName" value="contactForm"/>
                                             <TextInput
                                                 name="name"
                                                 id="name"
