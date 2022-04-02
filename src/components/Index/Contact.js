@@ -44,6 +44,7 @@ const Contact = ({ contactInfo }) => {
                                 id="contactForm"
                                 name="contactForm"
                                 method="POST"
+                                ContentType = "application/x-www-form-urlencoded"
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
                             >
