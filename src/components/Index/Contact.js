@@ -1,9 +1,38 @@
-import React, {useRef} from 'react'
+import React, { useState } from 'react'
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
+import {navigate} from "gatsby-link"
+
+const encode = (data) => {
+    console.log('encode data', data)
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join('&');
+}
 
 const Contact = ({ contactInfo }) => {
-    const form = useRef();
 
+    const [formState, setFormState] = useState({});
+
+    const handleChange = (event) => {
+        setFormState({...formState, [event.target.name]: event.target.value });
+        console.log('working', formState)
+    }
+    console.log(formState)
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+                "form-name": form.getAttribute("name"),
+                ...formState,
+            }),
+        })
+            .then(() => navigate(form.getAttribute("action")))
+            .catch((error) => alert(error));
+    };
     return (
         <section id="contact" className="contact-area ptb-100">
             <div className="container">
@@ -42,21 +71,21 @@ const Contact = ({ contactInfo }) => {
                         <div className="contact-form">
                             <ValidationForm
                                 id="contactForm"
-                                name="contactForm v2"
+                                name="contactForm v3"
                                 method="post"
-                                ContentType = "application/x-www-form-urlencoded"
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
-                                onSubmit ="submit"
+                                onSubmit={handleSubmit}
                             >
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
                                         <div className="form-group">
-                                            <input type="hidden" name="formName" value="contactForm v2"/>
+                                            <input type="hidden" name="formName" value="contactForm v3" />
                                             <TextInput
                                                 name="name"
                                                 id="name"
                                                 required
+                                                onChange={handleChange}
                                                 successMessage=""
                                                 errorMessage="Please enter your name"
                                                 className="form-control"
@@ -72,6 +101,7 @@ const Contact = ({ contactInfo }) => {
                                                 name="email"
                                                 id="email"
                                                 type="email"
+                                                onChange={handleChange}
                                                 required
                                                 successMessage=""
                                                 errorMessage="Please enter your email address"
@@ -89,6 +119,7 @@ const Contact = ({ contactInfo }) => {
                                                 name="subject"
                                                 id="subject"
                                                 type="text"
+                                                onChange={handleChange}
                                                 successMessage=""
                                                 errorMessage="Please enter your email subject"
                                                 className="form-control"
@@ -104,6 +135,7 @@ const Contact = ({ contactInfo }) => {
                                                 name="number"
                                                 id="number"
                                                 type="tel"
+                                                onChange={handleChange}
                                                 successMessage=""
                                                 errorMessage="Please enter your phone number"
                                                 className="form-control"
@@ -119,6 +151,7 @@ const Contact = ({ contactInfo }) => {
                                                 name="message"
                                                 id="description"
                                                 multiline
+                                                onChange={handleChange}
                                                 placeholder="Your message"
                                                 className="form-control"
                                                 required

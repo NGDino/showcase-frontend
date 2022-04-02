@@ -4,8 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 const Works = ({ workImages, workDescription }) => {
   const [photoIndex, setPhotoIndex] = React.useState(0)
-  console.log('work images', workImages)
-  console.log(workImages[0].asset.url)
   return (
     <React.Fragment>
       <section id="works" className="our-works ptb-100">
@@ -21,8 +19,8 @@ const Works = ({ workImages, workDescription }) => {
           </div>
 
           <div id="Portfolio" className="row">
-            {workImages.map(image => (
-              <div className="col-sm-6 col-lg-4">
+            {workImages.map((image, index) => (
+              <div className="col-sm-6 col-lg-4" key={index}>
                 <div className="work-details">
                   <img src={image.asset.url} alt="sample" />
 
