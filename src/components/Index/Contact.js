@@ -45,6 +45,7 @@ const Contact = ({ contactInfo }) => {
                                 name="contactForm"
                                 method="POST"
                                 data-netlify="true"
+                                data-netlify-honeypot="bot-field"
                             >
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
@@ -99,7 +100,7 @@ const Contact = ({ contactInfo }) => {
                                             <TextInput
                                                 name="number"
                                                 id="number"
-                                                type="text"
+                                                type="tel"
                                                 successMessage=""
                                                 errorMessage="Please enter your phone number"
                                                 className="form-control"
