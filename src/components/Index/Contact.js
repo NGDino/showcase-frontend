@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
-import {navigate} from "gatsby-link"
+import { navigate } from "gatsby-link"
 
 const encode = (data) => {
     return Object.keys(data)
@@ -13,7 +13,7 @@ const Contact = ({ contactInfo }) => {
     const [formState, setFormState] = useState({});
 
     const handleChange = (event) => {
-        setFormState({...formState, [event.target.name]: event.target.value });
+        setFormState({ ...formState, [event.target.name]: event.target.value });
     }
 
     const handleSubmit = (event) => {
@@ -77,6 +77,13 @@ const Contact = ({ contactInfo }) => {
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
                                         <div className="form-group">
+                                            <input type="hidden" name="formName" value="contactForm v4" />
+                                            <div hidden>
+                                                <label>
+                                                    Don’t fill this out:{" "}
+                                                    <input name="bot-field" onChange={handleChange} />
+                                                </label>
+                                            </div>
                                             <TextInput
                                                 name="name"
                                                 id="name"
