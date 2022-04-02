@@ -68,7 +68,7 @@ const Contact = ({ contactInfo }) => {
                         <div className="contact-form">
                             <ValidationForm
                                 id="contactForm"
-                                name="contactForm v4"
+                                name="contactForm v5"
                                 method="post"
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
@@ -77,7 +77,7 @@ const Contact = ({ contactInfo }) => {
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
                                         <div className="form-group">
-                                            <input type="hidden" name="formName" value="contactForm v4" />
+                                            <input type="hidden" name="formName" value="contactForm v5" />
                                             <div hidden>
                                                 <label>
                                                     Don’t fill this out:{" "}
