@@ -3,7 +3,6 @@ import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
 import {navigate} from "gatsby-link"
 
 const encode = (data) => {
-    console.log('encode data', data)
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join('&');
@@ -15,9 +14,7 @@ const Contact = ({ contactInfo }) => {
 
     const handleChange = (event) => {
         setFormState({...formState, [event.target.name]: event.target.value });
-        console.log('working', formState)
     }
-    console.log(formState)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -71,7 +68,7 @@ const Contact = ({ contactInfo }) => {
                         <div className="contact-form">
                             <ValidationForm
                                 id="contactForm"
-                                name="contactForm v3"
+                                name="contactForm v4"
                                 method="post"
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
@@ -80,7 +77,6 @@ const Contact = ({ contactInfo }) => {
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
                                         <div className="form-group">
-                                            <input type="hidden" name="formName" value="contactForm v3" />
                                             <TextInput
                                                 name="name"
                                                 id="name"
