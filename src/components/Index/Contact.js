@@ -43,10 +43,11 @@ const Contact = ({ contactInfo }) => {
                             <ValidationForm
                                 id="contactForm"
                                 name="contactForm"
-                                method="POST"
+                                method="post"
                                 ContentType = "application/x-www-form-urlencoded"
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
+                                onSubmit ="submit"
                             >
                                 <div className="row">
                                     <div className="col-lg-6 col-md-12">
