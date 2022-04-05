@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/home-icon.png`, // This path is relative to the root of the site.
       },
     },
     //sanity
@@ -37,8 +37,9 @@ module.exports = {
         dataset: `production`,
         // a token with read permissions is required
         // if you have a private dataset
-        // token: process.env.SANITY_TOKEN,
-
+        token: process.env.SANITY_TOKEN,
+        watchMode: true,
+        overlayDrafts:true,
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',

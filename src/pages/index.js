@@ -50,7 +50,12 @@ const IndexPage = () => {
           about{
             smallDescription,
             title,
-            bio
+            bio,
+            photo{
+              asset{
+                url
+              }
+            }
           },
           workDescription
         }
